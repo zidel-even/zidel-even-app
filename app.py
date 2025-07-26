@@ -5,11 +5,11 @@ st.set_page_config(page_title="Zidel Even ⚽", layout="centered")
 
 st.title("📊 Prédictions Football - 26 Juillet 🇷🇺")
 st.markdown("**By Zidel Even | Avec les codes promo 🔥**")
--st.markdown("- **1xbet : BXBX**")
+st.markdown("- **1xbet : BXBX**")
 st.markdown("- **Betwinner : BXBX01**")
 st.markdown("- **1win : BXBX01**")
--  
-- 
+
+
 
 df = pd.read_csv("matchs_demo.csv")
 
