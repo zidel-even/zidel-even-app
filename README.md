@@ -1,15 +1,21 @@
-# Application de Prédictions de Matchs de Football
+import streamlit as st
+import random
 
-Cette application Streamlit permet de faire des prédictions simples sur les scores de matchs de football à partir de paires d'équipes entrées par l'utilisateur.
+st.set_page_config(page_title="Zidel Even - Prédictions Foot", layout="centered")
 
-## Fonctionnalités
-- Entrée manuelle des matchs
-- Score exact prédit
-- Probabilité et justification fictive
-- Interface utilisateur simple
+st.title("⚽ Prédictions de Matchs de Football")
+st.markdown("Entrez deux équipes pour générer une prédiction.")
 
-## Lancement
-```bash
-pip install streamlit pandas numpy
-streamlit run app.py
-```
+team1 = st.text_input("Équipe 1")
+team2 = st.text_input("Équipe 2")
+
+if st.button("🔮 Prédire le score"):
+    if team1 and team2:
+        score1 = random.randint(0, 4)
+        score2 = random.randint(0, 4)
+
+        st.success(f"Résultat prédit : **{team1} {score1} - {score2} {team2}**")
+        st.info("Confiance : 68% · Justification : forme fictive des équipes.")
+
+    else:
+        st.warning("Veuillez entrer les deux équipes.")
