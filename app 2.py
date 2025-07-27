@@ -1,4 +1,5 @@
-
+logo = Image.open("A_logo_for_a_sports_betting_promotional_campaign.png")
+st.image(logo, use_column_width=True)
 import streamlit as st
 
 st.set_page_config(page_title="Zidel Even - Prédictions Foot", layout="centered")
